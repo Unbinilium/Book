@@ -19,11 +19,11 @@ jobs:
 
       - name: Install dependencies
         run: |
-          npm install
+          yarn install
 
       - name: Build docs
         run: |
-          npm run docs:build
+          yarn docs:build
 
       - name: Skip static
         run: | 
