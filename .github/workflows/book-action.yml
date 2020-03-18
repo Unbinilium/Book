@@ -1,0 +1,42 @@
+name: Book Action
+
+on:
+  push:
+    branches: 
+      - master
+    paths-ignore:
+      - 'README.md'
+      - 'LICENSE'
+
+jobs:
+  book-action:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          ref: master
+
+      - name: Install dependencies
+        run: |
+          npm install
+
+      - name: Build docs
+        run: |
+          npm run docs:build
+
+      - name: Skip static
+        run: | 
+          git update-index --skip-worktree 'docs/.vuepress/dist/static/'
+          git update-index --assume-unchanged 'docs/.vuepress/dist/static/'
+
+      - name: Deploy gh-pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+          commit_message: ${{ github.event.head_commit.message }}
+          publish_branch: gh-pages
+          publish_dir: docs/.vuepress/dist
+          cname: ${{ secrets.CNAME }}
+          enable_jekyll: true
+          keep_files: true

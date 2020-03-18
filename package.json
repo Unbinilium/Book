@@ -1,0 +1,31 @@
+{
+  "private": true,
+  "name": "unbinilium-book",
+  "version": "1.4.0",
+  "description": "Book of Unbinilium's knowledge base repository",
+  "scripts": {
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs",
+    "help": "echo 'Usage: npm run <docs:dev/docs:build/help>'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "Unbinilium/Book"
+  },
+  "author": "Unbinilium",
+  "license": "MIT",
+  "homepage": "https://github.com/Unbinilium/Book",
+  "devDependencies": {
+    "vuepress": "latest",
+    "@vuepress/plugin-pwa": "latest",
+    "@vuepress/plugin-search": "latest",
+    "@vuepress/plugin-active-header-links": "latest",
+    "vuepress-plugin-clean-urls": "latest",
+    "vuepress-plugin-copyright": "latest",
+    "vuepress-plugin-mathjax": "latest",
+    "vuepress-plugin-nprogress": "latest",
+    "vuepress-plugin-smooth-scroll": "latest",
+    "vuepress-theme-default-prefers-color-scheme": "latest",
+    "markdown-it-html5-embed": "latest"
+  }
+}
