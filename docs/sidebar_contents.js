@@ -8,7 +8,7 @@ module.exports = [
       "coding/swift",
       "coding/java",
       "coding/javascript",
-      "coding/html"
+      "coding/css"
     ]
   },
   {

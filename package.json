@@ -10,11 +10,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "Unbinilium/Book"
+    "url": "https://github.com/Unbinilium/Book.git"
   },
   "author": "Unbinilium",
   "license": "MIT",
-  "homepage": "https://github.com/Unbinilium/Book",
+  "homepage": "https://github.com/Unbinilium/Book/",
   "devDependencies": {
     "vuepress": "latest",
     "@vuepress/plugin-pwa": "latest",
