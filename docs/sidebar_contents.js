@@ -48,7 +48,8 @@ module.exports = [
     collapsable: true,
     children: [
       "design/icon",
-      "design/ui-ux"
+      "design/ui-ux",
+      "design/product"
     ]
   },
   {
