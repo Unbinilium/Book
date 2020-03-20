@@ -226,8 +226,8 @@ self.__precacheManifest = [
     "revision": "a1d4988c94710d709905662c6e82b2ba"
   },
   {
-    "url": "assets/js/7.1e87f354.js",
-    "revision": "4ff34bd3c455eac46424c62bda989d86"
+    "url": "assets/js/7.19de616b.js",
+    "revision": "e91606670ae0e529bad63e860584c25c"
   },
   {
     "url": "assets/js/8.0ca25d1a.js",
@@ -238,68 +238,68 @@ self.__precacheManifest = [
     "revision": "8dc749343401bbf02c6c08e1ad189e65"
   },
   {
-    "url": "assets/js/app.5d92b099.js",
-    "revision": "37c5b4ee47b76e589805a4b114521517"
+    "url": "assets/js/app.a925b3c6.js",
+    "revision": "2e5717673ba44f103d19bec35fe8dd16"
   },
   {
     "url": "coding/c++/index.html",
-    "revision": "876609fcd2b9cae923d0caa330378c48"
+    "revision": "786dc181b7a7d5d6969a8600e57d7a5e"
   },
   {
     "url": "coding/css/index.html",
-    "revision": "82bb4fd43c98125f083b92881dfa405d"
+    "revision": "13edac623f5cb809a3fc112499f0faa4"
   },
   {
     "url": "coding/java/index.html",
-    "revision": "7969571c5d4928edc7450aa2686bf619"
+    "revision": "b84d2e1760f8409636abf30d51a24779"
   },
   {
     "url": "coding/javascript/index.html",
-    "revision": "7814fe3226b833c3beac2bc71f3fd326"
+    "revision": "836d46fc292e59c11bb1769468da505b"
   },
   {
     "url": "coding/python/index.html",
-    "revision": "ae7207a5a26f3296c26200fb70d7bbb5"
+    "revision": "1977418831869329fd8172c20976c03d"
   },
   {
     "url": "coding/swift/index.html",
-    "revision": "34909b560cf8d2f1e32e0ba81610d909"
+    "revision": "e2431d1f2b311828536779647860ac30"
   },
   {
     "url": "collection/game/index.html",
-    "revision": "aa9a0641280093b5669117d6667b6e09"
+    "revision": "a0bb2bcf6c96b6985322b03e9e5262d5"
   },
   {
     "url": "collection/movie/index.html",
-    "revision": "61051f90cc717a7437b6cfadca519aa3"
+    "revision": "b4cb66a36807747054047b0305bac814"
   },
   {
     "url": "collection/music/index.html",
-    "revision": "83ff2887d9ec3be819633d48e64a958a"
+    "revision": "4b57e3f9e31a3a978cdfd1a9c7e7e37f"
   },
   {
     "url": "collection/novel/index.html",
-    "revision": "866dd06cb175b2bb96c00effa80b3f72"
+    "revision": "615761b9352773dc240fb9d657ee3007"
   },
   {
     "url": "collection/reference/index.html",
-    "revision": "4ad9426d8b044378794ba34388f8d173"
+    "revision": "455ee51e1fb25025060a09ae26aa19ae"
   },
   {
     "url": "collection/website/index.html",
-    "revision": "d6c915cd5dccc6b4f93e3b814b47248a"
+    "revision": "07c53ea235c7f169234aebfb31ea1a78"
   },
   {
     "url": "design/icon/index.html",
-    "revision": "cfd2e412aefd15f648ef1c443d6bdf72"
+    "revision": "4d2ac83463d0aad550cd52c6ffd64e5c"
   },
   {
     "url": "design/product/index.html",
-    "revision": "10ca6acf3f355948f05ce0a60d36a206"
+    "revision": "4cfa54e7b65bf31329d93bb394d8cb0b"
   },
   {
     "url": "design/ui-ux/index.html",
-    "revision": "03472ec4153103b526bb8b064ccceae4"
+    "revision": "2e939648dbf432789885407365cab590"
   },
   {
     "url": "icons/apple-touch-icon.png",
@@ -347,71 +347,71 @@ self.__precacheManifest = [
   },
   {
     "url": "index.html",
-    "revision": "fd06cfeba7e6eec38cbbddfb12af9bea"
+    "revision": "e221e9ac9125dbfb09c56e77537e5b74"
   },
   {
     "url": "linux/command/index.html",
-    "revision": "616f948f3861c03a985a2c450806591d"
+    "revision": "5b5db72f8820da5cec89bd504f5fbd38"
   },
   {
     "url": "linux/networking/index.html",
-    "revision": "0582c691f6cc409d2d67bba394b60cf6"
+    "revision": "82cdfe83e8e01a3da89477229aa3da08"
   },
   {
     "url": "linux/optmization/index.html",
-    "revision": "d4ec38c738c54e5de032b32f686bc68e"
+    "revision": "e328a6becdb9988d4ae1f479aaf5f9f3"
   },
   {
     "url": "linux/software/index.html",
-    "revision": "6f3bc4d938d04c105fbe4cdabaa9658d"
+    "revision": "3e0772db3a79d6bdd98c089cadd4064e"
   },
   {
     "url": "programming/leet-code/index.html",
-    "revision": "43c29130048bf9c51e7e867bba95a914"
+    "revision": "79099d927fc7dfd2faf40dfa260ef1f0"
   },
   {
     "url": "programming/opencv/index.html",
-    "revision": "15b72e478db3b85035a37f58854875d3"
+    "revision": "92db1a2b3566108695fd09162a4ec909"
   },
   {
     "url": "programming/pytorch/index.html",
-    "revision": "95bfad91574f87cdf8aa201c48254e82"
+    "revision": "e4a7f0b8e871d88b517ae932215b0bce"
   },
   {
     "url": "programming/tensorflow/index.html",
-    "revision": "f1fa83ba309651942e766caa3ba930f1"
+    "revision": "eb3445ab7f4d701eea838ed4e03c3bc6"
   },
   {
     "url": "software/affinity/index.html",
-    "revision": "ad3e3353c1d33fe67c9f0a11c3cdf178"
+    "revision": "b662e27ad5285f097ccff8adcf5ae9f9"
   },
   {
     "url": "software/qt-creator/index.html",
-    "revision": "7a1a921a5487fb320613e040147b1d0b"
+    "revision": "b42c409ec6c8e5a1c7205738a50b2b9f"
   },
   {
     "url": "software/surge/index.html",
-    "revision": "76ae0f485ed2870e6caf4bd5094616ee"
+    "revision": "032f9b4dae4b89de62d5eb7d97e49104"
   },
   {
     "url": "software/vs-code/index.html",
-    "revision": "be0aa61e92894022929b5eb173cdd697"
+    "revision": "26be2d759c591ca2ab8626130a9f57a3"
   },
   {
     "url": "software/vs-studio/index.html",
-    "revision": "f31d9c475e77cc56583d018d1195baa4"
+    "revision": "f32fa362e3240d8bed00698fa5fc1bea"
   },
   {
     "url": "software/xcode/index.html",
-    "revision": "129a0b7f8db898484686683af10e11aa"
+    "revision": "ff30d995ae0105fb4835e782465210d5"
   },
   {
     "url": "writing/draft/index.html",
-    "revision": "60617575299826c99e7f476d0029479b"
+    "revision": "f79293cf2c1208f4b5e32fe9c5c949b7"
   },
   {
     "url": "writing/matrix/index.html",
-    "revision": "3f46526c9e2f940deab62fe4676463a1"
+    "revision": "9f792d5684b6a5614f1ae98da0e3e697"
   }
 ].concat(self.__precacheManifest || []);
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
