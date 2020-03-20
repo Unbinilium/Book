@@ -141,7 +141,7 @@ Futhermore we can embed videos which extension is `.m3u8` liked using [HTTP Live
        playsinline webkit-playsinline
        autoplay controls preload="auto"
        x-webkit-airplay="true"
-       src="https://examplescom/video.m3u8"
+       src="https://examples.com/video.m3u8"
        type="application/x-mpegURL"
 /video>
 ```
@@ -154,7 +154,7 @@ If you are not only targeting evergreen browsers, you'd better use `video.js` fo
        playsinline webkit-playsinline
        autoplay controls preload="auto"
        x-webkit-airplay="true">
-    <source src="https://examplescom/video.m3u8" type="application/x-mpegURL">
+    <source src="https://examples.com/video.m3u8" type="application/x-mpegURL">
 </video>
 
 <script src="http://cdn.bootcss.com/video.js/*.*.*/video.js"></script>
