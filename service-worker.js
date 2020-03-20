@@ -238,68 +238,68 @@ self.__precacheManifest = [
     "revision": "8dc749343401bbf02c6c08e1ad189e65"
   },
   {
-    "url": "assets/js/app.ced00bf5.js",
-    "revision": "8101c01500f35f9d14bf18c939b1ec03"
+    "url": "assets/js/app.cf751f64.js",
+    "revision": "279da558291b2f98e4b299871ffde832"
   },
   {
     "url": "coding/c++/index.html",
-    "revision": "014f4d6816743d67a7e3f49fcfbbc325"
+    "revision": "63e605b6fb8ddf94b9e3d82c8ce8af7e"
   },
   {
     "url": "coding/css/index.html",
-    "revision": "b08b1fafcf6bdcc72fe2f236738ef58e"
+    "revision": "fb65919a8403bce2efcd0119a392ff7f"
   },
   {
     "url": "coding/java/index.html",
-    "revision": "bc1162d85f8b61cf8a02a46e47628a36"
+    "revision": "8baf1a9be97858ba77b8a2a760459b22"
   },
   {
     "url": "coding/javascript/index.html",
-    "revision": "79348ad5422e7e646a319c3b783e8221"
+    "revision": "3954faddc27c6b5b3ae8fea5009c9384"
   },
   {
     "url": "coding/python/index.html",
-    "revision": "04aae7b9de36c3c3af90e0240a9ff024"
+    "revision": "13d5d1871da8c12b296f7c068961dbfc"
   },
   {
     "url": "coding/swift/index.html",
-    "revision": "6890fcb2096c6cebb929e2486b66fccd"
+    "revision": "1b01decdaabd63d34a1bb0ba5bc1bf44"
   },
   {
     "url": "collection/game/index.html",
-    "revision": "9fce306d7d3e37564912844c3fdf1a8e"
+    "revision": "590ea0f9722ed9947c2a02f451e18126"
   },
   {
     "url": "collection/movie/index.html",
-    "revision": "cc1dcc7314cd0af56fbe494709a7ca1a"
+    "revision": "7c3471dac9e5c94198230117a6692044"
   },
   {
     "url": "collection/music/index.html",
-    "revision": "63469d9933e4cd54e2fb6648d8cffde5"
+    "revision": "ccbb35f407ca41d13df44167f1109c46"
   },
   {
     "url": "collection/novel/index.html",
-    "revision": "ec2a510db6de4cb3abe8462e2f940e26"
+    "revision": "405ed59cb0447578871e7e31aeee67f7"
   },
   {
     "url": "collection/reference/index.html",
-    "revision": "8b7a52c69f758e70d8cb0f218855f7f5"
+    "revision": "f1209aab47018d0dc51a62e67f27e74f"
   },
   {
     "url": "collection/website/index.html",
-    "revision": "d81e3c9dffd49c48ac339d90c47b8986"
+    "revision": "15f6e507d37cfe4a0d70da40d37a955e"
   },
   {
     "url": "design/icon/index.html",
-    "revision": "4c7e8d6be137c78c756d395bc8af7c48"
+    "revision": "7b047cb3f9e6d00e4a7cc0937c10b4f8"
   },
   {
     "url": "design/product/index.html",
-    "revision": "7e3fb18567e57181e643bf43acaf6bab"
+    "revision": "9f4ba01716d4c0a0fb5d3dca4a86ccc9"
   },
   {
     "url": "design/ui-ux/index.html",
-    "revision": "46360fa4ac45202e8ba5e27fad5d0080"
+    "revision": "250e257e884edb3595184095f2eb928e"
   },
   {
     "url": "icons/apple-touch-icon.png",
@@ -347,71 +347,71 @@ self.__precacheManifest = [
   },
   {
     "url": "index.html",
-    "revision": "714dd7e42a9287d8665d327a847ec317"
+    "revision": "35d2782eb7ccfbb7adf10f835654c2f1"
   },
   {
     "url": "linux/command/index.html",
-    "revision": "a14bf6e43d48e0cca8d4e4b7c48f8578"
+    "revision": "d12f540af78a09fc8299a2cddeaf54a4"
   },
   {
     "url": "linux/networking/index.html",
-    "revision": "6ab780607b715b1fd44c638788673fbf"
+    "revision": "77176667338e35608a1a4c6d663edb80"
   },
   {
     "url": "linux/optmization/index.html",
-    "revision": "275df908865e2810719f5ee02a1949a1"
+    "revision": "a92fbf57ff7f440cb5823dad11d22e0c"
   },
   {
     "url": "linux/software/index.html",
-    "revision": "afa9e4e3d7f71287afc1cd68bc10270a"
+    "revision": "5926c963675c4d7cee4799d678a5593a"
   },
   {
     "url": "programming/leet-code/index.html",
-    "revision": "8d7ffef49dffeb1d8146a575db52262c"
+    "revision": "89785e8a33a0e63f591a3fefa4862b34"
   },
   {
     "url": "programming/opencv/index.html",
-    "revision": "36c4e906a904f811566914d031e8314c"
+    "revision": "65738f3aeb6ce832d80e0808b11a41b3"
   },
   {
     "url": "programming/pytorch/index.html",
-    "revision": "266e78ca8bfb090566415d2ef2e2c4fd"
+    "revision": "0ba8ae873aa21331b96d2b242b742890"
   },
   {
     "url": "programming/tensorflow/index.html",
-    "revision": "87f975a3c93086e99779088860cf7226"
+    "revision": "6c24900b60361afe264b579fcb59346d"
   },
   {
     "url": "software/affinity/index.html",
-    "revision": "60361e5e5d0affc75e1344056959c065"
+    "revision": "1af8dbe6d185d075f0782d2f3527c6a2"
   },
   {
     "url": "software/qt-creator/index.html",
-    "revision": "747c294901ba3e6881996dc4fa2b068a"
+    "revision": "6de5b0119b9a0b25afd860e5039dc4bc"
   },
   {
     "url": "software/surge/index.html",
-    "revision": "a7dff390e7844e5a4ae02f7075f87998"
+    "revision": "b911faed58167e76f7e40064d293cc98"
   },
   {
     "url": "software/vs-code/index.html",
-    "revision": "69f16fa752b32632cfca8f61b3943e1b"
+    "revision": "bf460c920ff8e4f95bc5f2e28cecbb6a"
   },
   {
     "url": "software/vs-studio/index.html",
-    "revision": "880cdcb34e07fcfd1e74d4bc872b0550"
+    "revision": "a6db229405048f0b1803cdbfdaebc0cb"
   },
   {
     "url": "software/xcode/index.html",
-    "revision": "d15dde95a248dee0f2a01272b8e885db"
+    "revision": "414ef463d99234b59d5b7c65bb465008"
   },
   {
     "url": "writing/draft/index.html",
-    "revision": "5a3a8ccecb66afec54f3f283916d0bca"
+    "revision": "2d97697fa38ee81c96c08f5f83e8f1b9"
   },
   {
     "url": "writing/matrix/index.html",
-    "revision": "0e34e411506bec7ad6b8538d1830d578"
+    "revision": "24cd9c66387fa1557eed9021ea567027"
   }
 ].concat(self.__precacheManifest || []);
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
