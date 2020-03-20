@@ -26,8 +26,8 @@ self.addEventListener('message', (event) => {
  */
 self.__precacheManifest = [
   {
-    "url": "assets/css/0.styles.4b7e2858.css",
-    "revision": "3c1d9273764b5f87494002e7674c6103"
+    "url": "assets/css/0.styles.e8e0687e.css",
+    "revision": "b4761fb2fe74d76716bec56f9de618de"
   },
   {
     "url": "assets/fonts/MathJax_AMS-Regular.07173fb7.woff",
@@ -170,8 +170,8 @@ self.__precacheManifest = [
     "revision": "8e86089eda8ad6ac40af9a0eaf54f7bc"
   },
   {
-    "url": "assets/js/3.0f135a11.js",
-    "revision": "919c4f42a998ead9d14d1fc4ea26e639"
+    "url": "assets/js/3.fee81bc3.js",
+    "revision": "ddac26339682118b71d9066cd257e1ce"
   },
   {
     "url": "assets/js/30.503d1a49.js",
@@ -238,68 +238,68 @@ self.__precacheManifest = [
     "revision": "8dc749343401bbf02c6c08e1ad189e65"
   },
   {
-    "url": "assets/js/app.a925b3c6.js",
-    "revision": "2e5717673ba44f103d19bec35fe8dd16"
+    "url": "assets/js/app.ced00bf5.js",
+    "revision": "8101c01500f35f9d14bf18c939b1ec03"
   },
   {
     "url": "coding/c++/index.html",
-    "revision": "786dc181b7a7d5d6969a8600e57d7a5e"
+    "revision": "014f4d6816743d67a7e3f49fcfbbc325"
   },
   {
     "url": "coding/css/index.html",
-    "revision": "13edac623f5cb809a3fc112499f0faa4"
+    "revision": "b08b1fafcf6bdcc72fe2f236738ef58e"
   },
   {
     "url": "coding/java/index.html",
-    "revision": "b84d2e1760f8409636abf30d51a24779"
+    "revision": "bc1162d85f8b61cf8a02a46e47628a36"
   },
   {
     "url": "coding/javascript/index.html",
-    "revision": "836d46fc292e59c11bb1769468da505b"
+    "revision": "79348ad5422e7e646a319c3b783e8221"
   },
   {
     "url": "coding/python/index.html",
-    "revision": "1977418831869329fd8172c20976c03d"
+    "revision": "04aae7b9de36c3c3af90e0240a9ff024"
   },
   {
     "url": "coding/swift/index.html",
-    "revision": "e2431d1f2b311828536779647860ac30"
+    "revision": "6890fcb2096c6cebb929e2486b66fccd"
   },
   {
     "url": "collection/game/index.html",
-    "revision": "a0bb2bcf6c96b6985322b03e9e5262d5"
+    "revision": "9fce306d7d3e37564912844c3fdf1a8e"
   },
   {
     "url": "collection/movie/index.html",
-    "revision": "b4cb66a36807747054047b0305bac814"
+    "revision": "cc1dcc7314cd0af56fbe494709a7ca1a"
   },
   {
     "url": "collection/music/index.html",
-    "revision": "4b57e3f9e31a3a978cdfd1a9c7e7e37f"
+    "revision": "63469d9933e4cd54e2fb6648d8cffde5"
   },
   {
     "url": "collection/novel/index.html",
-    "revision": "615761b9352773dc240fb9d657ee3007"
+    "revision": "ec2a510db6de4cb3abe8462e2f940e26"
   },
   {
     "url": "collection/reference/index.html",
-    "revision": "455ee51e1fb25025060a09ae26aa19ae"
+    "revision": "8b7a52c69f758e70d8cb0f218855f7f5"
   },
   {
     "url": "collection/website/index.html",
-    "revision": "07c53ea235c7f169234aebfb31ea1a78"
+    "revision": "d81e3c9dffd49c48ac339d90c47b8986"
   },
   {
     "url": "design/icon/index.html",
-    "revision": "4d2ac83463d0aad550cd52c6ffd64e5c"
+    "revision": "4c7e8d6be137c78c756d395bc8af7c48"
   },
   {
     "url": "design/product/index.html",
-    "revision": "4cfa54e7b65bf31329d93bb394d8cb0b"
+    "revision": "7e3fb18567e57181e643bf43acaf6bab"
   },
   {
     "url": "design/ui-ux/index.html",
-    "revision": "2e939648dbf432789885407365cab590"
+    "revision": "46360fa4ac45202e8ba5e27fad5d0080"
   },
   {
     "url": "icons/apple-touch-icon.png",
@@ -347,71 +347,71 @@ self.__precacheManifest = [
   },
   {
     "url": "index.html",
-    "revision": "e221e9ac9125dbfb09c56e77537e5b74"
+    "revision": "714dd7e42a9287d8665d327a847ec317"
   },
   {
     "url": "linux/command/index.html",
-    "revision": "5b5db72f8820da5cec89bd504f5fbd38"
+    "revision": "a14bf6e43d48e0cca8d4e4b7c48f8578"
   },
   {
     "url": "linux/networking/index.html",
-    "revision": "82cdfe83e8e01a3da89477229aa3da08"
+    "revision": "6ab780607b715b1fd44c638788673fbf"
   },
   {
     "url": "linux/optmization/index.html",
-    "revision": "e328a6becdb9988d4ae1f479aaf5f9f3"
+    "revision": "275df908865e2810719f5ee02a1949a1"
   },
   {
     "url": "linux/software/index.html",
-    "revision": "3e0772db3a79d6bdd98c089cadd4064e"
+    "revision": "afa9e4e3d7f71287afc1cd68bc10270a"
   },
   {
     "url": "programming/leet-code/index.html",
-    "revision": "79099d927fc7dfd2faf40dfa260ef1f0"
+    "revision": "8d7ffef49dffeb1d8146a575db52262c"
   },
   {
     "url": "programming/opencv/index.html",
-    "revision": "92db1a2b3566108695fd09162a4ec909"
+    "revision": "36c4e906a904f811566914d031e8314c"
   },
   {
     "url": "programming/pytorch/index.html",
-    "revision": "e4a7f0b8e871d88b517ae932215b0bce"
+    "revision": "266e78ca8bfb090566415d2ef2e2c4fd"
   },
   {
     "url": "programming/tensorflow/index.html",
-    "revision": "eb3445ab7f4d701eea838ed4e03c3bc6"
+    "revision": "87f975a3c93086e99779088860cf7226"
   },
   {
     "url": "software/affinity/index.html",
-    "revision": "b662e27ad5285f097ccff8adcf5ae9f9"
+    "revision": "60361e5e5d0affc75e1344056959c065"
   },
   {
     "url": "software/qt-creator/index.html",
-    "revision": "b42c409ec6c8e5a1c7205738a50b2b9f"
+    "revision": "747c294901ba3e6881996dc4fa2b068a"
   },
   {
     "url": "software/surge/index.html",
-    "revision": "032f9b4dae4b89de62d5eb7d97e49104"
+    "revision": "a7dff390e7844e5a4ae02f7075f87998"
   },
   {
     "url": "software/vs-code/index.html",
-    "revision": "26be2d759c591ca2ab8626130a9f57a3"
+    "revision": "69f16fa752b32632cfca8f61b3943e1b"
   },
   {
     "url": "software/vs-studio/index.html",
-    "revision": "f32fa362e3240d8bed00698fa5fc1bea"
+    "revision": "880cdcb34e07fcfd1e74d4bc872b0550"
   },
   {
     "url": "software/xcode/index.html",
-    "revision": "ff30d995ae0105fb4835e782465210d5"
+    "revision": "d15dde95a248dee0f2a01272b8e885db"
   },
   {
     "url": "writing/draft/index.html",
-    "revision": "f79293cf2c1208f4b5e32fe9c5c949b7"
+    "revision": "5a3a8ccecb66afec54f3f283916d0bca"
   },
   {
     "url": "writing/matrix/index.html",
-    "revision": "9f792d5684b6a5614f1ae98da0e3e697"
+    "revision": "0e34e411506bec7ad6b8538d1830d578"
   }
 ].concat(self.__precacheManifest || []);
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
