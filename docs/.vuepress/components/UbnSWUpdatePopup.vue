@@ -41,4 +41,4 @@ export default {
 
 &:not(:hover):not(:focus)
   box-shadow 0px 0 1px 0 black
- </style>
+</style>
