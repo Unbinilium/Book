@@ -15,7 +15,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
         with:
-          ref: master
+          ref: 'master'
 
       - name: Install dependencies
         run: |
@@ -25,18 +25,15 @@ jobs:
         run: |
           yarn docs:build
 
-      - name: Skip static
-        run: | 
-          git update-index --skip-worktree 'docs/.vuepress/dist/static/'
-          git update-index --assume-unchanged 'docs/.vuepress/dist/static/'
-
       - name: Deploy gh-pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
-          commit_message: ${{ github.event.head_commit.message }}
-          publish_branch: gh-pages
-          publish_dir: docs/.vuepress/dist
+          user_name: 'Unbinilium'
+          user_email: ${{ secrets.EMAIL }}
           cname: ${{ secrets.CNAME }}
+          commit_message: ${{ github.event.head_commit.message }}
+          publish_branch: 'gh-pages'
+          publish_dir: 'docs/.vuepress/dist'
           enable_jekyll: true
           keep_files: true
