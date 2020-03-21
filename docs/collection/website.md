@@ -226,6 +226,34 @@ Make your website faster and save bandwidth. TinyPNG optimizes your PNG images b
 
 Easy to use online animated GIF maker and image editor.
 
+#### [removebg](https://www.remove.bg/)
+
+Remove Image Background: 100% automatically – in 5 seconds – without a single click – for free.
+
+#### [Emoji Mosaic](http://ericandrewlewis.github.io/emoji-mosaic/)
+
+Turn an image into a mosaic made of emojis.
+
+#### [Smartmockups](https://smartmockups.com/)
+
+Create stunning products screenshots without Photoshop for free!
+
+#### [Vectorizer](https://www.vectorizer.io/)
+
+Online Vectorizer: Online raster to vector converter. Convert your images (jpeg, jpg or png) into scalable and clear vector art (svg,eps,dxf). 
+
+#### [Voxelize Image](https://pissang.github.io/voxelize-image/)
+
+Source Code Built on top of ClayGL.
+
+#### [WordArt](https://wordart.com/)
+
+WordArt.com is an online word cloud art creator that enables you to create amazing and unique word cloud art with ease.
+
+#### [PHOTOOMOSH](https://photomosh.com/)
+
+Glitch images, videos or webcam using WebGL effects. Save output as image, gif or video.
+
 #### [UltraTools](https://www.ultratools.com/)
 
 UltraTools is a complete set of free DNS and domain tools, which test the health of your domain name servers, websites and online hosting environment.
