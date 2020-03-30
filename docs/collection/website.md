@@ -120,6 +120,14 @@ Netease Cloud Music is a freemium music streaming service developed and owned by
 This link is my own favorite playlist on netease music.
 :::
 
+#### [Youtube](https://www.youtube.com/playlist?list=LLK4IoPuHqjt8mkko2zzAv5w)
+
+Enjoy the videos and music you love, upload original content, and share it all with friends, family, and the world on YouTube.
+
+:::warning
+This link is my own favorite playlist on Youtube.
+:::
+
 ## Coding
 
 #### [Github](https://github.com/)

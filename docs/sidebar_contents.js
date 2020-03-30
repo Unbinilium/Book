@@ -15,6 +15,7 @@ module.exports = [
     title: "Programming",
     collapsable: true,
     children: [
+      "programming/algorithm",
       "programming/opencv",
       "programming/tensorflow",
       "programming/pytorch",
@@ -75,6 +76,7 @@ module.exports = [
       "collection/novel",
       "collection/movie",
       "collection/music",
+      "collection/artist",
       "collection/game"
     ]
   }
