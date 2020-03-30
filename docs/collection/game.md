@@ -90,7 +90,11 @@ America, 1899. The end of the Wild West era has begun. After a robbery goes badl
 
 Winner of over 175 Game of the Year Awards and recipient of over 250 perfect scores, RDR2 is the epic tale of outlaw Arthur Morgan and the infamous Van der Linde gang, on the run across America at the dawn of the modern age.
 
-![Red Dead Redemption 2 from Steam](https://media.st.dl.eccdnx.com/steam/apps/256768371/movie_max.mp4)
+![Red Dead Redemption 2 from Steam](https://xn--vt8h.unbinilium.me/static/collection/red-dead-redemption-2.mp4)
+
+:::tip
+[Steam](https://store.steampowered.com/app/1174180/Red_Dead_Redemption_2/)
+:::
 
 ### [Bounce Tales](https://en.wikipedia.org/wiki/Bounce_(video_game_series))
 

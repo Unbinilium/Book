@@ -22,7 +22,7 @@ haarcascade_frontalface_default.xml
 It could be found at OpenCV official git repository at:
 
 :::tip
-[https://github.com/opencv/opencv/tree/master/data/haarcascade](https://github.com/opencv/opencv/tree/master/data/haarcascade)
+[opencv/data/haarcascade](https://github.com/opencv/opencv/tree/master/data/haarcascade)
 :::
 
 ```python

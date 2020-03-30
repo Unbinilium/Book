@@ -22,15 +22,21 @@ module.exports = [
     ]
   },
   {
+    title: "Security",
+    collapsable: true,
+    children: [
+      "security/cyber",
+      "security/cipher"
+    ]
+  },
+  {
     title: "Software",
     collapsable: true,
     children: [
-      "software/xcode",
-      "software/vs-code",
-      "software/vs-studio",
-      "software/qt-creator",
-      "software/surge",
-      "software/affinity"
+      "software/ide",
+      "software/creative",
+      "software/networking",
+      "software/utilities"
     ]
   },
   {
