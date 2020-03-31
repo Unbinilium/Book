@@ -23,7 +23,6 @@ module.exports = {
     ['meta', { property: 'og:description', content: 'Unbinilium\'s personal knowledge book' }],
     ['meta', { property: 'og:url', content: 'https://xn--vt8h.unbinilium.me/' }],
     ['meta', { property: 'og:image', content: 'https://xn--vt8h.unbinilium.me/open_graph_logo.png' }],
-    ['meta', { property: 'og:image', content: 'website' }],
     ['meta', { property: 'og:type', content: 'website' }],
     ['meta', { property: 'og:site_name', content: 'Unbinilium\'s 📖' }]
   ],
