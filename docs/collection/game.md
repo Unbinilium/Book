@@ -28,7 +28,7 @@ Shadowmatic is an imagination stirring puzzle where you rotate abstract objects 
 
 The game combines stunning visuals with relaxing and captivating gameplay. On your journey to discover the right solution you will stumble upon many unexpected and infinitely varied silhouettes.
 
-![Shadowmatic](https://xn--vt8h.unbinilium.me/static/collection/shadowmatic.mp4)
+![Shadowmatic](https://resource.unbinilium.me/Book/collection/shadowmatic.mp4)
 
 :::tip
 [Shadowmatic launch trailer](https://www.youtube.com/watch?v=7g-nu1KwkDw)
@@ -50,7 +50,7 @@ Tengami is an atmospheric adventure game set inside a Japanese pop-up book. Fold
 
 Uncertain of his sister's fate, a boy enters LIMBO.
 
-![LIMBO](https://xn--vt8h.unbinilium.me/static/collection/limbo.mp4)
+![LIMBO](https://resource.unbinilium.me/Book/collection/limbo.mp4)
 
 :::tip
 [LIMBO - Trailer](https://www.youtube.com/watch?v=Y4HSyVXKYz8)
@@ -60,7 +60,7 @@ Uncertain of his sister's fate, a boy enters LIMBO.
 
 Monument Valley 2 is an illusory adventure of impossible architecture and forgiveness by ustwo games.
 
-![Monument Valley 2](https://xn--vt8h.unbinilium.me/static/collection/monument-valley-2.mp4)
+![Monument Valley 2](https://resource.unbinilium.me/Book/collection/monument-valley-2.mp4)
 
 :::tip
 [Monument Valley 2 - Official Release Trailer](https://www.youtube.com/watch?v=tW2KUxyq8Vg)
@@ -70,7 +70,7 @@ Monument Valley 2 is an illusory adventure of impossible architecture and forgiv
 
 Alone and surrounded by miles of burning, sprawling desert, you soon discover the looming mountaintop is your goal. The passage will not be easy but this experience of a lifetime will help you discover who you are, what this place is, as you arrive at your purpose.
 
-![Journey](https://xn--vt8h.unbinilium.me/static/collection/journey.mp4)
+![Journey](https://resource.unbinilium.me/Book/collection/journey.mp4)
 
 :::tip
 [Journey™ Launch Trailer](https://www.youtube.com/watch?v=61DZC-60x20)
@@ -90,7 +90,7 @@ America, 1899. The end of the Wild West era has begun. After a robbery goes badl
 
 Winner of over 175 Game of the Year Awards and recipient of over 250 perfect scores, RDR2 is the epic tale of outlaw Arthur Morgan and the infamous Van der Linde gang, on the run across America at the dawn of the modern age.
 
-![Red Dead Redemption 2 from Steam](https://xn--vt8h.unbinilium.me/static/collection/red-dead-redemption-2.mp4)
+![Red Dead Redemption 2 from Steam](https://resource.unbinilium.me/Book/collection/red-dead-redemption-2.mp4)
 
 :::tip
 [Steam](https://store.steampowered.com/app/1174180/Red_Dead_Redemption_2/)
@@ -106,7 +106,7 @@ Released in 2008, by Nokia Inc. Also the favorite game in my childhood.
 
 Still in release, the sequel of Deemo, a rhythm game featuring soothing piano songs, the notes of which tell a heartwarming tale.
 
-![Deemo II](https://xn--vt8h.unbinilium.me/static/collection/deemo-2.mp4)
+![Deemo II](https://resource.unbinilium.me/Book/collection/deemo-2.mp4)
 
 :::tip
 [Deemo](https://www.rayark.com/en/games/deemo/)

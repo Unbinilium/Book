@@ -35,5 +35,6 @@ jobs:
           commit_message: ${{ github.event.head_commit.message }}
           publish_branch: 'gh-pages'
           publish_dir: 'docs/.vuepress/dist'
+          force_orphan: true
           enable_jekyll: true
           keep_files: true

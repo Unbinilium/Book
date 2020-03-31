@@ -12,11 +12,15 @@ Here not only I record and share my life experience, collect every charming thin
 
 Here I commit my workspace and social media, follow me if you satisfied /owo/
 
-* **Instagram** - [https://instagram.com/unbinilium](https://instagram.com/unbinilium)
-* **Dribbble** - [https://dribbble.com/Unbinilium](https://dribbble.com/Unbinilium)
-* **Github** - [https://github.com/Unbinilium](https://github.com/Unbinilium)
-* **Twitter** - [https://twitter.com/ekaplutonium](https://twitter.com/ekaplutonium)
-* **Weibo** - [https://weibo.com/kotonamirin](https://weibo.com/kotonamirin)
-* **MONO** - [http://mmmono.com/group/104182](http://mmmono.com/group/104182)
-* **Telegram** - [https://t.me/Unbinilium](https://t.me/Unbinilium)
+* [**Instagram**](https://instagram.com/unbinilium)
+* [**Dribbble**](https://dribbble.com/Unbinilium)
+* [**Github**](https://github.com/Unbinilium)
+* [**Twitter**](https://twitter.com/ekaplutonium)
+* [**Weibo**](https://weibo.com/kotonamirin)
+* [**Bilibili**](https://space.bilibili.com/20854705)
+* [**MONO**](http://mmmono.com/user/55e823c6563c3b2962f08c77/share)
+
+Contact 💬
+
+* **Telegram** - [Unbinilium](https://t.me/Unbinilium)
 * **WeChat** - `Unbinilium`

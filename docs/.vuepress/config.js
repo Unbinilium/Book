@@ -6,9 +6,6 @@ module.exports = {
   base: "/",
   
   locales: {
-    '/': {
-      lang: 'en-US'
-    }
   },
   
   head: [ 
@@ -21,7 +18,14 @@ module.exports = {
     ['meta', { name: 'apple-mobile-web-app-status-bar-style', content: 'default' }],
     ['meta', { name: 'theme-color', content: '#3eaf7c' }],
     ['meta', { name: 'msapplication-TileColor', content: '#fff' }],
-    ['meta', { name: 'msapplication-TileImage', content: '/icons/msapplication-icon.png' }]
+    ['meta', { name: 'msapplication-TileImage', content: '/icons/msapplication-icon.png' }],
+    ['meta', { property: 'og:title', content: 'Unbinilium\'s 📖' }],
+    ['meta', { property: 'og:description', content: 'Unbinilium\'s personal knowledge book' }],
+    ['meta', { property: 'og:url', content: 'https://xn--vt8h.unbinilium.me/' }],
+    ['meta', { property: 'og:image', content: 'https://xn--vt8h.unbinilium.me/open_graph_logo.png' }],
+    ['meta', { property: 'og:image', content: 'website' }],
+    ['meta', { property: 'og:type', content: 'website' }],
+    ['meta', { property: 'og:site_name', content: 'Unbinilium\'s 📖' }]
   ],
 
   markdown: {
@@ -38,6 +42,11 @@ module.exports = {
         serviceWorker: true,
         popupComponent: 'UbnSWUpdatePopup',
         updatePopup: true
+      }
+    ],
+    ['@vuepress/google-analytics',
+      {
+        'ga': 'UA-160648249-1'
       }
     ],
     ['vuepress-plugin-clean-urls',
