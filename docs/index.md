@@ -24,3 +24,7 @@ Contact 💬
 
 * **Telegram** - [Unbinilium](https://t.me/Unbinilium)
 * **WeChat** - `Unbinilium`
+
+Postcard 📇, both Apple Pay and Google Wallet supported
+
+* [**Press to add postcard**](https://unbinilium.me/postcard.pkpass)
