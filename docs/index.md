@@ -10,7 +10,11 @@ I started blogging in my Junior journey, as a saying goes "Life is like a Book",
 
 Here not only I record and share my life experience, collect every charming things which worth memorable, but also wrote something meaningful for the time. Furthermore, I aim to build this book as structured archiving of knowledge base.
 
-Here I commit my workspace and social media, follow me if you satisfied /owo/
+Why not try adding my postcard?
+
+* [**Add postcard**](https://unbinilium.me/postcard.pkpass)
+
+Both Apple Pay and Google Wallet supported. Anyway I also commit my workspace and social media below, follow me if you satisfied /owo/
 
 * [**Instagram**](https://instagram.com/unbinilium)
 * [**Dribbble**](https://dribbble.com/Unbinilium)
@@ -24,7 +28,3 @@ Contact 💬
 
 * **Telegram** - [Unbinilium](https://t.me/Unbinilium)
 * **WeChat** - `Unbinilium`
-
-Postcard 📇, both Apple Pay and Google Wallet supported
-
-* [**Press to add postcard**](https://unbinilium.me/postcard.pkpass)
