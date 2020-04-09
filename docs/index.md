@@ -14,7 +14,7 @@ If you're interested, why not try adding my Postcard?
 
 * [**Add Postcard**](https://unbinilium.me/postcard.pkpass)
 
-Both Apple Pay and Google Wallet are supported. Anyway I also commit my workspace and social media below, follow me if you satisfied /owo/
+Both Apple Wallet and Google Pay are supported. Anyway I also commit my workspace and social media below, follow me if you satisfied /owo/
 
 * [**Instagram**](https://instagram.com/unbinilium)
 * [**Dribbble**](https://dribbble.com/Unbinilium)
