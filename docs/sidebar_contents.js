@@ -79,5 +79,17 @@ module.exports = [
       "collection/artist",
       "collection/game"
     ]
+  },
+  {
+    title: "See Also",
+    collapsable: true,
+    children: [
+      ["https://www.narihiroch.tk/", "Atelier Narihiro"],
+      ["https://chlorie.github.io/ChloroBlog/", "Chlorie"],
+      ["https://factorialn.xyz", "FactorialN"],
+      ["https://nachtgeistw.github.io/Berksey/", "NachtgeistW"],
+      ["https://wiki-power.com/", "Power's Wiki"],
+      ["https://yoka.ml", "夜楓 Yoka"]
+    ]
   }
 ];

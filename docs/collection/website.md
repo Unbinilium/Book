@@ -313,15 +313,3 @@ Drag colors to blend. No rotational symmetry. Mirror across center.
 #### [CSS-Tricks](https://css-tricks.com/)
 
 CSS-Tricks is created, written by, and maintained by Chris Coyier and a team of swell people. 
-
-#### [Chlorie](https://chlorie.github.io/ChloroBlog/)
-
-Chlore(HCl) - PhD student of ICT, CAS. Research on machine learning & data mining. Bug producer. Loves MUGs. Loves C++.
-
-#### [NachtgeistW](https://nachtgeistw.github.io/Berksey/)
-
-Hello world! There is 98-74 Ocean Street, Sky Heights, Berksey.
-
-#### [Power's Wiki](https://wiki-power.com/)
-
-My friend Lin Yuxuan's personal knowledge base.
