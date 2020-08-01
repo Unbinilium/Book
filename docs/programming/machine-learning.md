@@ -293,7 +293,7 @@ augmented_images = ImageDataGenerator(
 
 When the CNN model is trained fully on a synthetic dataset, it witnesses a significant performance drop when testing on real-world data, compared to when applied to another synthetic validation set. It alludes to discrepancies between the distributions of synthetic and real-world examples. They propose to decompose the *N CNN* layers into two sub-networks to be learned sequentially:
 
-- **Unsupervised cross-domain sub-network ${C_u}$**, which consists of the first *K* layers of CNN. It accounts for extracting low-level visual features shared by both syn- thetic and real-world data domains. ${C_u}$ will be trained in a unsupervised way, using unlabeled data from both domains. It constitutes the crucial step that further minimizes the low-level feature gap, beyond the previous data augmentation efforts.
+- **Unsupervised cross-domain sub-network ${C_u}$**, which consists of the first *K* layers of *CNN*. It accounts for extracting low-level visual features shared by both syn- thetic and real-world data domains. ${C_u}$ will be trained in a unsupervised way, using unlabeled data from both domains. It constitutes the crucial step that further minimizes the low-level feature gap, beyond the previous data augmentation efforts.
 
 - **Supervised domain-specific sub-network ${C_s}$**, which consists of the remaining *N − K* layers. It accounts for learning higher-level discriminative features for classi- fication, based on the shared features from ${C_u}$. ${C_s}$ will be trained in a supervised way, using labeled data from the synthetic domain only.
 
@@ -450,6 +450,6 @@ import matplotlib.pylab as plt
 label = rev_conv_label(int(y[0]))
 fig, ax = plt.subplots(1)
 ax.imshow(pil_img, interpolation = 'nearest', cmap = cm.gray)
-ax.text(5, 5, label , bbox = {'facecolor': 'white', 'pad': 8})
+ax.text(5, 5, label, bbox = {'facecolor': 'white', 'pad': 8})
 plt.show()
 ```
