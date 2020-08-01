@@ -1,6 +1,8 @@
 ---
-title: OpenCV
+title: Computer Vision
 ---
+
+Computer vision is an interdisciplinary scientific field that deals with how computers can gain high-level understanding from digital images or videos. Here I note some tricks or experience about OpenCV, OpenMV and other computer vision libraries.
 
 ## Add mask to faces
 

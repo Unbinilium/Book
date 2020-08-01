@@ -16,10 +16,8 @@ module.exports = [
     collapsable: true,
     children: [
       "programming/algorithm",
-      "programming/opencv",
-      "programming/tensorflow",
-      "programming/pytorch",
-      "programming/leet-code"
+      "programming/computer-vision",
+      "programming/machine-learning"
     ]
   },
   {
