@@ -6,7 +6,7 @@ title: Machine Learning
 
 ## DeepFont
 
-It was first introduced by Adobe, which uses deep learning to identify font type. Inspired by their works, I made this reproduction using keras.
+It was first introduced by Adobe, which uses deep learning to identify font type. Inspired by their works, I made this reproduction using [Keras](https://keras.io).
 
 :::tip
 
