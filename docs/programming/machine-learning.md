@@ -103,7 +103,7 @@ It is usual to artificially augment training data using label-preserving transfo
       return noise_img
   ```
 
-- **Blur** a random Gaussian blur with standard de- viation from 2.5 to 3.5 is added to input.
+- **Blur** a random Gaussian blur with standard deviation from 2.5 to 3.5 is added to input.
 
   ```python
   def blur_image(img):
