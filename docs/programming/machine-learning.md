@@ -422,11 +422,11 @@ Firstly code the lable restore function to convert font name from integer to str
 
 ```python
 def rev_conv_label(label):
-    if label == 0 :
+    if label == 0:
         return 'Font1'
     elif label == 1:
         return 'Font2'
-    elif label == 2 :
+    elif label == 2:
         return 'Font3'
 ```
 
