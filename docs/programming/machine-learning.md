@@ -60,7 +60,7 @@ TextRecognitionDataGenerator comes with an easy to use CLI and Python Module. It
 
 Fonts are different with objects, which have huge spatial information when classify features. Aimed to reduce the mismatch, preprocessing is required and exampled by the paper.
 
-Firstly, import needed modules:
+Firstly, import needed modules.
 
 ```python
 import PIL
@@ -70,11 +70,11 @@ import numpy as np
 
 :::warning
 
-Add `%matplotlib inline` as Magic Function if uses IPython to render images directly in browser.
+Add `%matplotlib inline` as Magic Function if uses IPython to render images directly in browser. Otherwise, It would cause errors if you're not using IPython.
 
 :::
 
-Then code image load function:
+Then code image load function.
 
 ```python
 def pil_image(img_path):
@@ -107,7 +107,7 @@ It is usual to artificially augment training data using label-preserving transfo
 
   ```python
   def blur_image(img):
-      blur_img = img.filter(PIL.ImageFilter.GaussianBlur(radius=3))
+      blur_img = img.filter(PIL.ImageFilter.GaussianBlur(radius = 3))
       PIL.imshow(blur_img)
       blur_img = blur_img.resize((105,105))
       return blur_img
@@ -259,7 +259,7 @@ According to the paper, 75% of the datasets is for training and the remaining 25
 ```python
 from sklearn.model_selection import train_test_split
 
-data = np.asarray(data, dtype="float") / 255.0
+data = np.asarray(data, dtype = "float") / 255.0
 labels = np.array(labels)
 
 (trainX, testX, trainY, testY) = train_test_split(data, labels, test_size = 0.25, random_state = 10)
@@ -328,7 +328,7 @@ def create_model():
   	model.add(MaxPooling2D(pool_size = (2, 2)))
 
   	model.add(Conv2DTranspose(128, (24, 24), strides = (2, 2), activation = 'relu', padding = 'same', kernel_initializer = 'uniform'))
-  	model.add(UpSampling2D(size=(2, 2)))
+  	model.add(UpSampling2D(size = (2, 2)))
 
   	model.add(Conv2DTranspose(64, (12, 12), strides = (2, 2), activation = 'relu', padding = 'same', kernel_initializer = 'uniform'))
   	model.add(UpSampling2D(size = (2, 2)))
