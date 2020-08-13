@@ -302,8 +302,18 @@ Firstly we modify the order of picture channels to avoid `OverflowError`.
 ```python
 from keras import backend as K
 
-K.set_image_data_format('channels_first')
+K.set_image_data_format('channels_last')
 ```
+
+:::tip
+
+Notice the difference about the format which `keras` use in different versions.
+
+- `K.set_image_dim_ordering('tf')` --> `K.set_image_data_format('channels_last')`
+
+- `K.set_image_dim_ordering('th')` --> `K.set_image_data_format('channels_first')`
+
+:::
 
 Secondly code create model function to define the architecture of the CNN layers.
 
