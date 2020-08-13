@@ -300,13 +300,10 @@ When the CNN model is trained fully on a synthetic dataset, it witnesses a signi
 Firstly we modify the order of picture channels to avoid `OverflowError`.
 
 ```python
-from keras as backend as K
+from keras import backend as K
 
-K.common.set_image_dim_ordering('tf')
+K.set_image_data_format('channels_first')
 ```
-
-- `th` -> `theano`,  the `input_shape` must be (channels, height, width).
-- `tf` -> `tensorflow`, the `input_shape` must be (height, width, channels).
 
 Secondly code create model function to define the architecture of the CNN layers.
 
