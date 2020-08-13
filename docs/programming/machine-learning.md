@@ -307,11 +307,12 @@ K.set_image_data_format('channels_last')
 
 :::tip
 
-Notice the difference about the format which `keras` use in different versions.
+Note the difference about the format which `keras` use in different versions.
 
-- `K.set_image_dim_ordering('tf')` --> `K.set_image_data_format('channels_last')`
-
-- `K.set_image_dim_ordering('th')` --> `K.set_image_data_format('channels_first')`
+```python
+K.set_image_dim_ordering('tf') --> K.set_image_data_format('channels_last')
+K.set_image_dim_ordering('th') --> K.set_image_data_format('channels_first')
+```
 
 :::
 
