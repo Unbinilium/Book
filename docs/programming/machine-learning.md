@@ -1,5 +1,6 @@
 ---
 title: Machine Learning
+
 ---
 
 **Machine learning** (**ML**) is the study of computer algorithms that improve automatically through experience. Here I wrote some notes about Tensorflow, PyTorch, Keras and some mainstream machine learning frameworks.
@@ -79,8 +80,7 @@ Then code image load function.
 ```python
 def pil_image(img_path):
     pil_img = PIL.Image.open(img_path).convert('L')
-    pil_img = pil_im.resize((105,105))
-    PIL.imshow(np.asarray(pil_img))
+    pil_img = pil_img.resize((105, 105))
     return pil_img
 ```
 
@@ -98,8 +98,7 @@ It is usual to artificially augment training data using label-preserving transfo
       noisy_img = img_array + np.random.normal(mean, std, img_array.shape)
       noisy_img_clipped = np.clip(noisy_img, 0, 255)
       noise_img = PIL.Image.fromarray(np.uint8(noisy_img_clipped))
-      PIL.imshow((noisy_img_clipped).astype(np.uint8))
-      noise_img = noise_img.resize((105,105))
+      noise_img = noise_img.resize((105, 105))
       return noise_img
   ```
 
@@ -108,8 +107,7 @@ It is usual to artificially augment training data using label-preserving transfo
   ```python
   def blur_image(img):
       blur_img = img.filter(PIL.ImageFilter.GaussianBlur(radius = 3))
-      PIL.imshow(blur_img)
-      blur_img = blur_img.resize((105,105))
+      blur_img = blur_img.resize((105, 105))
       return blur_img
   ```
 
@@ -126,8 +124,7 @@ It is usual to artificially augment training data using label-preserving transfo
   
       output = cv2.warpAffine(img, anchor, (columns, rows))
       affine_img = PIL.Image.fromarray(np.uint8(output))
-      PIL.imshow(output)
-      affine_img = affine_img.resize((105,105))
+      affine_img = affine_img.resize((105, 105))
       return affine_img
   ```
 
@@ -137,8 +134,7 @@ It is usual to artificially augment training data using label-preserving transfo
   def gradient_fill(img):
       output = cv2.Laplacian(img, cv2.CV_64F)
       laplacian_img = PIL.Image.fromarray(np.uint8(output))
-      PIL.imshow(output)
-      laplacian_img = laplacian_img.resize((105,105))
+      laplacian_img = laplacian_img.resize((105, 105))
       return laplacian_img
   ```
 
@@ -152,7 +148,7 @@ As a very particular type of images, text images have various real-world appeara
 It not convenient to do the additional steps for each characters, so loosely speaking, we could done this before legacy steps, at the beginning we generate our datasets using *TextRecognitionDataGenerator*.
 
 ```shell
-python3 tests.py -c 10 -k 15 -rk -d 3 -do 2 -f 64 -ft ['Font1', 'Font2', 'Font3'] -t $(grep -c ^processor /proc/cpuinfo)
+python3 run.py -c 10 -k 15 -rk -d 3 -do 2 -f 64 -ft ['Font1', 'Font2', 'Font3'] -t $(grep -c ^processor /proc/cpuinfo)
 ```
 
 This generate 10 examples with *Font1*, *Font2* and *Font3* which characters sized 64x64 with a skewing angle between -15 and 15 and a random distorsions both vertical and horizontal, multi-threads acceleration enabled.
@@ -168,20 +164,51 @@ Domain adapted CNN employs a Convolutional Neural Network (CNN) architecture, wh
 - **A "shared" low-level sub-network** which is learned from the composite set of synthetic and real-world data.
 - **A high-level sub-network** that learns a deep classifier from the low-level features.
 
-#### Import Datasets
+#### Generate Datasets
 
-Import pre-generated synthetic and realistic text images from `font_patch_path`.
+Here we use the *Text Recognition Data Generator* CLI `trdg` to generate the random datasets.
+
+- `ttf_path` is a folder contains all the font file with correct font name and `.ttf` extension.
+
+- `data_path` is a folder stores or contains generated datasets.
 
 ```python
+import os
+
+ttf_path = 'ttf_path'
+data_path = 'datasets_path'
+
+for file in os.listdir(ttf_path):
+    if file.endswith('.ttf'):
+        path = os.path.join(ttf_path, file)
+        name, ext = os.path.splitext(os.path.basename(path))
+        out_path = data_path + '/' + name
+        command = 'trdg -l en -c 10 -rs -let -num -r --length 1 -b 1 -e .png -fi -f 105 -ft ' + path + ' --output_dir ' + out_path 
+        os.system(command)
+```
+
+#### Import Datasets
+
+Import pre-generated synthetic and realistic text images from `datasets_path` *(here especially the datasets we generated before)*.
+
+```python
+import os
 from imutils import paths
 from random import seed, shuffle
 
-data_path = "font_patch_path"
-data = []
-labels = []
-imagePaths = sorted(list(paths.list_images(data_path)))
+image_paths = sorted(list(paths.list_images(data_path)))
 random.seed(10)
-random.shuffle(imagePaths)
+random.shuffle(image_paths)
+
+font_names = []
+
+for f in os.listdir(data_path):
+    if not f.startswith('.'):
+        font_names.append(f)
+        
+font_names.sort()
+
+print('Font Names -> ', font_names)
 ```
 
 #### Tag Labels
@@ -190,49 +217,42 @@ Convert font name string to integer and use the matched number as a font label w
 
 ```python
 def conv_label(label):
-    cnt = 0
-  	fontLables = ["Font1", "Font2", "Font3"]
-    
-    for fontLable in fontLables:
-      	if label == fontLable:
-        		return cnt
-      	cnt++
+    return font_names.index(label)
 ```
 
 #### Preprocessing Datasets
 
-Preprocessing functions are already finished, for each font patch images, effects should be applied randomly, so firstly we generate random combinations in 4 legacy preprocessing functions.
+Preprocessing functions are already finished, for each font patch images, effects should be applied randomly, so firstly we generate random combinations in 4 legacy preprocessing functions. Then apply the effects following the generated combinations list for all the font patch images.
 
 ```python
-auguments = ["blur", "noise", "affine", "gradient"]
-
-for augument in list(itertools.combinations(auguments, 4)): 
-    print(list(augument))
-```
-
-Then apply the effects following the generated combinations list for all the font patch images.
-
-```python
+import os
+import itertools
+import numpy as np
 from keras.preprocessing.image import img_to_array
 
-for imagePath in imagePaths:
-    label = imagePath.split(os.path.sep)[-2]
-    label = conv_label(label)
+data = []
+labels = []
+auguments = ["blur", "noise", "affine", "gradient"]
+
+for path in image_paths:
+    label = path.split(os.path.sep)[-2]
     
-    pil_img = pil_image(imagePath)
-    PIL.imshow(pil_img)
+    if not label.startswith('.'):
+        label = conv_label(label)
+    else:
+        continue
     
+    pil_img = pil_image(path)
     org_img = img_to_array(pil_img)
-    print(org_img.shape)
     
     data.append(org_img)
     labels.append(label)
     
     for i in range(0, len(auguments)):
         for augument in list(itertools.combinations(auguments, i + 1)):
-          	temp_img = pil_img
+            
+            temp_img = pil_img
             combinations = list(augument)
-            print(len(combinations))
             
             for method in combinations:
                 if method == 'noise':
@@ -250,6 +270,7 @@ for imagePath in imagePaths:
                     temp_img = gradient_fill(open_cv_gradient)
   
             temp_img = img_to_array(temp_img)
+    
             data.append(temp_img)
             labels.append(label)
 ```
@@ -407,8 +428,8 @@ model_path = "model_store_path"
 model = load_model(model_path)
 score = model.evaluate(testX, testY, verbose = 0)
 
-print('Test loss:', score[0])
-print('Test accuracy:', score[1])
+print('Test loss ->', score[0])
+print('Test accuracy ->', score[1])
 ```
 
 #### Load Image
@@ -417,11 +438,13 @@ Load the test image from `image_path` and preprocess with `blur_img` function, c
 
 ```python
 import PIL
+from keras.preprocessing.image import img_to_array
 
 img_path = "image_path"
-pil_img = PIL.Image.open(img_path).convert('L')
-pil_img = blur_img(pil_img)
-org_img = img_to_array(pil_img)
+
+org_img = PIL.Image.open(img_path).convert('L')
+pil_img = blur_image(org_img)
+pil_img = img_to_array(pil_img)
 ```
 
 #### Inference
@@ -430,12 +453,7 @@ Firstly code the lable restore function to convert font name from integer to str
 
 ```python
 def rev_conv_label(label):
-    if label == 0:
-        return 'Font1'
-    elif label == 1:
-        return 'Font2'
-    elif label == 2:
-        return 'Font3'
+    return font_names[label]
 ```
 
 Then use loaded model to predict image array.
@@ -444,7 +462,7 @@ Then use loaded model to predict image array.
 import numpy as np
 
 data = []
-data.append(org_img)
+data.append(pil_img)
 data = np.asarray(data, dtype = "float") / 255.0
 y = model.predict_classes(data)
 ```
@@ -457,7 +475,7 @@ import matplotlib.pylab as plt
 
 label = rev_conv_label(int(y[0]))
 fig, ax = plt.subplots(1)
-ax.imshow(pil_img, interpolation = 'nearest', cmap = cm.gray)
+ax.imshow(org_img, interpolation = 'nearest', cmap = cm.gray)
 ax.text(5, 5, label, bbox = {'facecolor': 'white', 'pad': 8})
 plt.show()
 ```
