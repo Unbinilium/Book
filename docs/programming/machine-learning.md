@@ -291,8 +291,8 @@ For further processing, both train and test labels of the datasets should be con
 ```python
 from keras.utils import to_categorical
 
-trainY = to_categorical(trainY, num_classes = 5)
-testY = to_categorical(testY, num_classes = 5)
+trainY = to_categorical(trainY, num_classes = len(font_names))
+testY = to_categorical(testY, num_classes = len(font_names))
 ```
 
 Then process the  datasets using additional preprocessing steps.
@@ -373,7 +373,7 @@ def create_model():
   	model.add(Dense(4096, activation = 'relu'))
   	model.add(Dropout(0.5))
   	model.add(Dense(2383, activation = 'relu'))
-  	model.add(Dense(5, activation = 'softmax'))
+  	model.add(Dense(len(font_names), activation = 'softmax'))
  
   	return model
 ```
