@@ -464,7 +464,7 @@ import numpy as np
 data = []
 data.append(pil_img)
 data = np.asarray(data, dtype = "float") / 255.0
-y = model.predict_classes(data)
+y = np.argmax(model.predict(data), axis = -1)
 ```
 
 Lastly, show the prediction results.
