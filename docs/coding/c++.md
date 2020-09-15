@@ -63,7 +63,18 @@ twodimearray[std::array<int, 2>{1, 1}] = 0;
 std::map<std::array<int, 3>, point> threedimearray;
 threedimearray[std::array<int, 3>{1, 1, 1}] = 0;
 ```
-## Color Area
+## Color area
+
+:::notice
+
+```cpp
+ubn::colorArea(ubn::StreamProp stream_prop, ubn::RectProp rect_prop, std::vector<ubn::ColorRange> color, unsigned int tries)
+```
+
+:::
+
+A basic function used for calculating the area size of specialized colors and find the color which has the biggest area size using *OpenCV*, multithreading featured.
+
 
 ```cpp
 /* Written by Unbinilium Jan, 12, 2020 :( */
@@ -669,9 +680,9 @@ namespace ubn {
             threads[i].detach();
         }
 
-        for(unsigned int i = 0; i != sem.size(); i++)
+        for(auto& _sem : sem)
         {
-            sem_close(&sem[i]);
+            sem_close(&_sem);
         }
 
         threads.clear();
