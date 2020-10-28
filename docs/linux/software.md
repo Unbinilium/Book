@@ -352,7 +352,7 @@ sudo apt install libopenblas-dev libatlas-base-dev libblas-dev -y
 Qt is a cross-platform C++ application framework. Qt's primary feature is its rich set of widgets that provide standard GUI functionality.
 
 ```shell
-sudo apt install libgtk-3-dev qt5-default -y
+sudo apt install qt5-default -y
 ```
 
 #### HDF5
