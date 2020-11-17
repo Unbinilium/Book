@@ -2,11 +2,11 @@ name: Book Action
 
 on:
   push:
-    branches: 
-      - master
+    branches:
+      - main
     paths-ignore:
-      - 'README.md'
-      - 'LICENSE'
+      - "README.md"
+      - "LICENSE"
 
 jobs:
   book-action:
@@ -15,7 +15,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
         with:
-          ref: 'master'
+          ref: "master"
 
       - name: Install dependencies
         run: |
@@ -29,12 +29,12 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
-          user_name: 'Unbinilium'
+          user_name: "Unbinilium"
           user_email: ${{ secrets.EMAIL }}
           cname: ${{ secrets.CNAME }}
           commit_message: ${{ github.event.head_commit.message }}
-          publish_branch: 'gh-pages'
-          publish_dir: 'docs/.vuepress/dist'
+          publish_branch: "gh-pages"
+          publish_dir: "docs/.vuepress/dist"
           force_orphan: true
           enable_jekyll: true
           keep_files: true

@@ -6,7 +6,6 @@ module.exports = [
       "coding/c++",
       "coding/python",
       "coding/swift",
-      "coding/java",
       "coding/javascript",
       "coding/web"
     ]
@@ -33,9 +32,7 @@ module.exports = [
     collapsable: true,
     children: [
       "software/ide",
-      "software/creative",
-      "software/networking",
-      "software/utilities"
+      "software/opensourced"
     ]
   },
   {
@@ -44,8 +41,7 @@ module.exports = [
     children: [
       "linux/command",
       "linux/networking",
-      "linux/optmization",
-      "linux/software"
+      "linux/optmization"
     ]
   },
   {
@@ -53,28 +49,22 @@ module.exports = [
     collapsable: true,
     children: [
       "design/icon",
-      "design/ui-ux",
-      "design/product"
+      "design/ui-ux"
     ]
   },
   {
     title: "Writing",
     collapsable: true,
     children: [
-      "writing/draft",
-      "writing/matrix"
+      "writing/draft"
     ]
   },
   {
     title: "Collection",
     collapsable: true,
     children: [
-      "collection/reference",
       "collection/website",
       "collection/novel",
-      "collection/movie",
-      "collection/music",
-      "collection/artist",
       "collection/game"
     ]
   },

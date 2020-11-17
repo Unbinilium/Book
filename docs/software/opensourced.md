@@ -1,5 +1,5 @@
 ---
-title: Software
+title: Open Sourced
 ---
 
 ## Build Shadowsocks
@@ -177,7 +177,7 @@ shadowsocks-libev.service - Shadowsocks-libev Default Server Service
   python3 setup.py build
   sudo python3 setup.py install
   ```
-  
+
 ## Build OpenCV
 
 **OpenCV** (*Open Source Computer Vision Library*) is a [library of programming functions](https://en.wikipedia.org/wiki/Library_(computing)) mainly aimed at real-time [computer vision](https://en.wikipedia.org/wiki/Computer_vision).
@@ -250,10 +250,10 @@ Like Jetson TX2, which hardware has standalone GPU support, that we could enable
   ```shell
   apt search cuda
   sudo apt install <CUDA name>
-  
+
   apt search cudnn
   sudo apt install <CuDnn name>
-  
+
   apt search NightSystems
   sudo apt install <NightSystems>
   ```
@@ -341,7 +341,7 @@ sudo apt install v4l-utils libv4l-dev libdc1394-22-dev -y
 
 #### BLAS
 
-BLAS (Basic Linear Algebra Subroutines) is a set of efficient routines for most of the basic vector and matrix operations. They are widely used as the basis for other high quality linear algebra software, for example lapack and linpack. 
+BLAS (Basic Linear Algebra Subroutines) is a set of efficient routines for most of the basic vector and matrix operations. They are widely used as the basis for other high quality linear algebra software, for example lapack and linpack.
 
 ```shell
 sudo apt install libopenblas-dev libatlas-base-dev libblas-dev -y
@@ -365,7 +365,7 @@ sudo apt install libhdf5-serial-dev hdf5-tools libhdf5-dev -y
 
 #### Tesseract
 
-Tesseract is an open source Optical Character Recognition (OCR) Engine. It can be used directly, or (for programmers) using an API to extract printed text from images. It supports a wide variety of languages. 
+Tesseract is an open source Optical Character Recognition (OCR) Engine. It can be used directly, or (for programmers) using an API to extract printed text from images. It supports a wide variety of languages.
 
 ```shell
 sudo apt install libtesseract-dev tesseract-ocr -y
@@ -395,7 +395,7 @@ sudo apt install libeigen3-dev -y
 
   ```shell
   pushd /tmp
-  
+
   wget -O opencv.zip https://github.com/opencv/opencv/archive/4.5.0.zip
   wget -O opencv_contrib.zip https://github.com/opencv/opencv_contrib/archive/4.5.0.zip
   ```
@@ -512,21 +512,21 @@ int main()
 {
     Mat frame;
     VideoCapture cap;
-    
+
     cap.open("nvarguscamerasrc ! video/x-raw(memory:NVMM), width=(int)720, height=(int)480, format=(string)NV12, framerate=(fraction)30/1 ! nvvidconv ! video/x-raw, format=BGRx ! videoconvert ! video/x-raw, format=BGR ! appsink");
     if (!cap.isOpened()) return -1;
-    
+
     for (;;)
     {
         cap.read(frame);
-        
+
         if (frame.empty()) continue;
-        
+
         imshow("frame", frame);
-        
+
         if (waitKey(1) >= 0) break;
     }
-    
+
     return 0;
 }
 ```
