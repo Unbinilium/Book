@@ -13,7 +13,8 @@ Setting up OpenCV and C++ environment on macOS using Xcode.
 #### Pre Requirements
 
 - Install Homebrew
-Aptly titled ‘The missing package manager for macOS’, enough said. Homebrew is the macOS equivalent of the Ubuntu/Debian-based apt-get.
+
+Aptly titled *"The missing package manager for macOS"* is enough said. Homebrew is the macOS equivalent of the Ubuntu/Debian-based `apt-get`.
 
 ```bash
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
