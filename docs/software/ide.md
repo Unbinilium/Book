@@ -6,7 +6,7 @@ title: IDE
 
 Xcode is a complete developer toolset for creating apps for Mac, iPhone, iPad, Apple Watch, and Apple TV. Xcode brings user interface design, coding, testing, debugging, and submitting to the App Store all into a unified workflow.
 
-### Getstarted with OpenCV
+### Using with OpenCV
 
 Setting up OpenCV and C++ environment on macOS using Xcode.
 
@@ -125,7 +125,7 @@ Ref: [Setting up OpenCV and C++ development environment in Xcode for Computer Vi
 
 Editing and debugging on any OS.
 
-### Using Clang in Visual Studio Code
+### Using with C/C++
 
 :::tip
 

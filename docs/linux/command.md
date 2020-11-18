@@ -243,7 +243,7 @@ scp username@remotehost:~/\{foo.txt,bar.txt\} .
 
 Git is a free and open source distributed version control system designed to handle everything from small to very large projects with speed and efficiency. Git is easy to learn and has a tiny footprint with lightning fast performance.
 
-### General
+#### General
 
 - `git config` - this command sets the author name and email address respectively to be used with your commits.
 
@@ -375,7 +375,7 @@ git stash list # lists all stashed changesets
 git stash drop # discards the most recently stashed changeset
 ```
 
-### Merge master to main
+#### Merge master to main
 
 1. Create *main* branch locally, taking the history from *master*:
 
@@ -413,6 +413,8 @@ The GNU Compiler Collection includes front ends for C, C++, Objective-C, Fortran
 
 :::
 
+#### General
+
 ```cpp
 #include <iostream>
 
@@ -447,6 +449,60 @@ Simply we use `-c` flag:
 ```bash
 gcc -c main.s -o main.o
 ```
+
+#### Optmization
+
+:::tip
+
+[Recommended compiler and linker flags for GCC](https://developers.redhat.com/blog/2018/03/21/compiler-and-linker-flags-gcc/)
+
+:::
+
+| **Flag**                                       | **Purpose**                                             | **Applicable Red Hat Enterprise Linux versions** | **Applicable Fedora versions**         |
+| :--------------------------------------------- | :------------------------------------------------------ | :----------------------------------------------- | :------------------------------------- |
+| `-D_FORTIFY_SOURCE=2`                          | Run-time buffer overflow detection                      | All                                              | All                                    |
+| `-D_GLIBCXX_ASSERTIONS`                        | Run-time bounds checking for C++ strings and containers | All (but ineffective without DTS 6 or later)     | All                                    |
+| `-fasynchronous-unwind-tables`                 | Increased reliability of backtraces                     | All (for aarch64, i386, s390, s390x, x86_64)     | All (for aarch64, i386, s390x, x86_64) |
+| `-fexceptions`                                 | Enable table-based thread cancellation                  | All                                              | All                                    |
+| `-fpie -Wl,-pie`                               | Full ASLR for executables                               | 7 and later (for executables)                    | All (for executables)                  |
+| `-fpic -shared`                                | No text relocations for shared libraries                | All (for shared libraries)                       | All (for shared libraries)             |
+| `-fplugin=annobin`                             | Generate data for hardening quality control             | Future                                           | Fedora 28 and later                    |
+| `-fstack-clash-protection`                     | Increased reliability of stack overflow detection       | Future (after 7.5)                               | 27 and later (except armhfp)           |
+| `-fstack-protector` or `-fstack-protector-all` | Stack smashing protector                                | 6 only                                           | n/a                                    |
+| `-fstack-protector-strong`                     | Likewise                                                | 7 and later                                      | All                                    |
+| `-g`                                           | Generate debugging information                          | All                                              | All                                    |
+| `-grecord-gcc-switches`                        | Store compiler flags in debugging information           | All                                              | All                                    |
+| `-mcet -fcf-protection`                        | Control flow integrity protection                       | Future                                           | 28 and later (x86 only)                |
+| `-O2`                                          | Recommended optimizations                               | All                                              | All                                    |
+| `-pipe`                                        | Avoid temporary files, speeding up builds               | All                                              | All                                    |
+| `-Wall`                                        | Recommended compiler warnings                           | All                                              | All                                    |
+| `-Werror=format-security`                      | Reject potentially unsafe format string arguents        | All                                              | All                                    |
+| `-Werror=implicit-function-declaration`        | Reject missing function prototypes                      | All (C only)                                     | All (C only)                           |
+| `-Wl,-z,defs`                                  | Detect and reject underlinking                          | All                                              | All                                    |
+| `-Wl,-z,now`                                   | Disable lazy binding                                    | 7 and later                                      | All                                    |
+| `-Wl,-z,relro`                                 | Read-only segments after relocation                     | 6 and later                                      | All                                    |
+
+This table does not list flags for managing an executable stack or the `.bss` section, under the assumption that these historic features have been phased out by now.
+
+**Documentation for compiler flags** is available in the [GCC manual](https://gcc.gnu.org/onlinedocs/gcc/Invoking-GCC.html). Those flags (which start with `-Wl`) are passed to the linker and are described in the [documentation for ld](https://sourceware.org/binutils/docs/ld/Options.html).
+
+For some flags, additional explanations are in order:
+
+- `-D_GLIBCXX_ASSERTIONS` enables additional **C++ standard library hardening**. It is implemented in libstdc++ and described in the [libstdc++ documentation ](https://gcc.gnu.org/onlinedocs/libstdc++/manual/using_macros.html). Unlike the C++ containers with full debugging support, its use does not result in ABI changes.
+- `-fasynchronous-unwind-tables` is required for many **debugging and performance tools** to work on most architectures (armhfp, ppc, ppc64, ppc64le do not need these tables due to architectural differences in stack management). Even though it is necessary on aarch64, upstream GCC does not enable it by default. The compilers for Red Hat Enterprise Linux and Fedora carry a patch to enable it by default.
+- `-fexceptions` is recommended for **hardening of multi-threaded C and C++ code.** Without it, the implementation of thread cancellation handlers (introduced by `pthread_cleanup_push`) uses a completely unprotected function pointer on the stack. This function pointer can simplify the exploitation of stack-based buffer overflows even if the thread in question is never canceled.
+- `-fstack-clash-protection` prevents attacks based on an **overlapping heap and stack**. This is a new compiler flag in GCC 8, which has been backported to the system compiler in Red Hat Enterprise Linux 7.5 and Fedora 26 (and later versions of both). We expect this compiler feature to reach maturity in Red Hat Enterprise Linux 7.6. The GCC implementation of this flag comes in two flavors: generic and architecture-specific. The generic version shares many of its problems with the older `-fstack-check` flag (which is not recommended for use). For the architectures supported by Red Hat Enterprise Linux, improved architecture-specific versions are available. This includes aarch64, for which only problematic generic support is available in upstream GCC (as of mid-February 2018). The Fedora armhfp architecture also lacks upstream and downstream support, so the flag cannot be used there.
+- `-fstack-protector-strong` completely supersedes the earlier **stack protector** options. It only instruments functions that have addressable local variables or use `alloca`. Other functions cannot be subject to direct stack buffer overflows and are not instrumented. This greatly reduces the performance and code size impact of the stack protector.
+- To enable **address space layout randomization (ASLR)** for the main program (executable), `-fpie -Wl,-pie` has to be used. However, while the code produced this way is position-independent, it uses some relocations which cannot be used in shared libraries (dynamic shared objects). For those, use `-fpic`, and link with `-shared` (to avoid text relocations on architectures which support position-dependent shared libraries). Dynamic shared objects are always position-independent and therefore support ASLR. Furthermore, the kernel in Red Hat Enterprise Linux 6 uses an unfortunate address space layout for PIE binaries under certain circumstances ([bug 1410097](https://bugzilla.redhat.com/show_bug.cgi?id=1410097)) which can severely interfere with debugging (among other things). This is why it is not recommended to build PIE binaries on Red Hat Enterprise Linux 6.
+- `-fplugin=annobin` enables the [annobin compiler plugin](https://developers.redhat.com/blog/2018/02/20/annobin-storing-information-binaries/), which captures additional metadata to allow a determination of which compiler flags were used during the build. Annobin is currently available only on Fedora, and it is automatically [enabled as part of the Fedora 28 build flags ](https://fedoraproject.org/wiki/Changes/Annobin), where it shows up as `-specs=/usr/lib/rpm/redhat/redhat-annobin-cc1`.
+- To generate **debugging information** we recommend (using `-g`), even for optimized production builds. Having only partly usable debugging information (due to optimization) certainly beats having none at all. With GCC, generating debugging information does not alter code generation. It is possible to use tools such as `eu-strip` to separate debugging information before distributing binaries (which automatically happens during RPM builds).
+- `-grecord-gcc-switches` captures compiler flags, which can be useful to determine whether the intended compiler flags are used throughout the build.
+- `-mcet -fcf-protection` enables support for the **Control-Flow Enforcement Technology (CET)** feature in future Intel CPUs. This involves the generation of additional NOPs, which are ignored by the current CPUs. It is recommended that you enable this flag now, to detect any issues caused by them (e.g., interactions with dynamic instrumentation frameworks, or performance issues).
+- For many applications, `-O2` is a good choice because the additional inlining and loop unrolling introduced by `-O3` increases the instruction cache footprint, which ends up reducing performance. `-O2` or higher is also required by `-D_FORTIFY_SOURCE=2`.
+- By default, GCC allows code to call **undeclared functions**, treating them as returning `int`. `-Werror=implicit-function-declaration` turns such calls into errors. This avoids difficult-to-track-down run-time errors because the default `int` return type is not compatible with `bool` or pointers on many platforns. For C++, this option is not needed because the C++ compiler rejects calls to undeclared functions.
+- `-Wl,-z,defs` is required to detect **underlinking**, which is a phenomenon caused by missing shared library arguments when invoking the linked editor to produce another shared library. This produces a shared library with incomplete ELF dependency information (in the form of missing `DT_NEEDED` tags), and the resulting shared object may not be forward compatible with future versions of libraries which use symbol versioning (such as glibc), because symbol versioning information is missing from it.
+- `-Wl,-z,now` (also referred to as `BIND_NOW`) is not recommended for use on Red Hat Enterprise Linux 6 because the dynamic linker processes non-lazy relocations in the wrong order ([bug 1398716](https://bugzilla.redhat.com/show_bug.cgi?id=1398716)), causing IFUNC resolvers to fail. IFUNC resolver interactions remain an open issue even for later versions, but `-Wl,-z,defs` will catch the problematic cases involving underlinking.
+
 
 ## minicom
 
