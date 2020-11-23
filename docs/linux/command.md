@@ -397,10 +397,15 @@ git symbolic-ref refs/remotes/origin/HEAD refs/remotes/origin/main
 
 4. Change the default branch on GitHub to *main*.
 
-1. Delete the master branch on the remote:
+5. Delete the master branch on the remote:
 
 ```bash
 git push origin --delete master
+```
+
+6. Set git init default to `main`:
+```bash
+git config --global init.defaultBranch main
 ```
 
 ## gcc
