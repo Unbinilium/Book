@@ -125,7 +125,7 @@ Ref: [Setting up OpenCV and C++ development environment in Xcode for Computer Vi
 
 Editing and debugging on any OS.
 
-### Using with C/C++
+### Using C/C++ with Clang on macOS
 
 :::tip
 
@@ -133,11 +133,7 @@ Editing and debugging on any OS.
 
 :::
 
-In this tutorial, you configure Visual Studio Code on macOS to use the Clang/LLVM compiler and debugger.
-
-After configuring VS Code, you will compile and debug a simple C++ program in VS Code. This tutorial does not teach you about Clang or the C++ language. For those subjects, there are many good resources available on the Web.
-
-If you have any trouble, feel free to file an issue for this tutorial in the [VS Code documentation repository](https://github.com/microsoft/vscode-docs/issues).
+In this tutorial, you configure Visual Studio Code on macOS to use the Clang/LLVM compiler and debugger. After configuring VS Code, you will compile and debug a simple C++ program in VS Code.
 
 #### Prerequisites
 
@@ -242,8 +238,6 @@ Replace the contents of that file with the following:
 
 ```json
 {
-    // See https://go.microsoft.com/fwlink/?LinkId=733558
-    // for the documentation about the tasks.json format
     "version": "2.0.0",
     "tasks": [
         {
@@ -333,9 +327,6 @@ The `"isDefault": true` value in the `group` object specifies that this task wil
 
     ```json
     {
-        // Use IntelliSense to learn about possible attributes.
-        // Hover to view descriptions of existing attributes.
-        // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
         "version": "0.2.0",
         "configurations": [
             {
@@ -461,7 +452,7 @@ You only need to modify the **Include path** setting if your program includes he
 
     - Explore the [VS Code User Guide](https://code.visualstudio.com/docs/editor/codebasics.md).
     - Review the [Overview of the C++ extension](https://code.visualstudio.com/docs/languages/cpp.md)
-    - Create a new workspace, copy your .json files to it, adjust the necessary settings for the new workspace path, program name, and so on, and start coding!
+    - Create a new workspace, copy your `.json` files to it, adjust the necessary settings for the new workspace path, program name, and so on, and start coding!
 
 ## Visual Studio
 
