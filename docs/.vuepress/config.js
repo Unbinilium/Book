@@ -71,6 +71,12 @@ module.exports = {
       }
     ]
   ],
+  
+  extraWatchFiles: [
+    '.vuepress/nav.js',
+    '.vuepress/sidebar.js',
+    'sidebar_contents.js'
+  ],
 
   theme: 'default-prefers-color-scheme',
   
