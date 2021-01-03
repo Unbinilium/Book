@@ -18,6 +18,18 @@ del dict['Name']; # remove entry with key 'Name'
 del dict ;        # delete entire dictionary
 ```
 
+## Calculator
+
+Here we use some common basics, first define a dictionary variable `op`, whose key is used to store all operation instructions except `quit`, and the corresponding value is processed by *lambda*; in the `while` dead loop, determine whether the character entered by keyboard corresponds to a key in `op`. If it is, we continue to input two space-separated numbers, use `spilt()` and `map()` functions to process the input data, then pass in the lambda expression corresponding to the key in `op` and output the result; if not, we determine whether the keyed value is a `quit` exit instruction, and if it is true, then `break` to exit the loop.
+
+```python
+op = {'add':lambda T:T[0]+T[1],'sub':lambda T:T[0]-T[1],'mul':lambda T:T[0]*T[1],'div':lambda T:T[0]/T[1]}
+while True:
+    cmd = input('Input command:')
+    if cmd != 'quit' and cmd in op.keys(): print(op[cmd](list(map(float, input('Input 2 numbers:').split()))))
+    elif cmd == 'quit': break
+```
+
 ## Flask
 
 “Micro” does not mean that your whole web application has to fit into a single Python file (although it certainly can), nor does it mean that Flask is lacking in functionality. The “micro” in microframework means Flask aims to keep the core simple but extensible. Flask won’t make many decisions for you, such as what database to use. Those decisions that it does make, such as what templating engine to use, are easy to change. Everything else is up to you, so that Flask can be everything you need and nothing you don’t.
