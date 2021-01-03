@@ -192,10 +192,6 @@ Open Snapdrop on other devices to send files. The easiest way to transfer data a
 
 CowTransfer was founded in 2016, the most efficient way to share large files.
 
-#### [Firefox Send](https://send.firefox.com/)
-
-Firefox Send lets you share files with end-to-end encryption and a link that automatically expires. So you can keep what you share private and make sure your stuff doesn't stay online forever.
-
 ## Snippets
 
 #### [Ubuntu Pastebin](https://paste.ubuntu.com/)
@@ -217,6 +213,10 @@ Image-bed, 5 MB max per file. 10 files max per request.
 MEGA provides free cloud storage with convenient and powerful always-on privacy. 
 
 ## Utilities
+
+#### [DeepL](https://www.deepl.com/translator)
+
+DeepL is the first free translation service to enable users to specify exactly how certain words and expressions should be translated. The feature, known as the Glossary, is an innovative interface between DeepL Translator's artificial intelligence and people's individual requirements and preferences.
 
 #### [Polarr](https://photoeditor.polarr.co/)
 
