@@ -4,6 +4,7 @@ title: C++
 
 C++ is a high-level, general-purpose programming language created by Bjarne Stroustrup as an extension of the C programming language, or "C with Classes".
 
+
 ## Use uninitialized array
 
 In C/C++, we can define multidimensional arrays in simple words as array of arrays. Data in multidimensional arrays are stored in tabular form \(in row major order\). A dynamic 2D array is basically an array of pointers to arrays. So you first need to initialize the array of pointers to pointers and then initialize each 1d array in a loop. Example below using `new`:
@@ -32,10 +33,10 @@ int main()
 For another purpose we have a powerful tool named `vector` in c++, let's see how it works.
 
 ```cpp
-#include <iostream> 
+#include <iostream>
 #include <vector>
 
-int main() 
+int main()
 {
     int row = 3, col =3;
     vector<vector<int>> array(row , vector<int>(col));
@@ -126,24 +127,24 @@ namespace liner_algebra
     {
     protected:
         std::vector<T> data_;
-        
+
     public:
         explicit vector(const size_t size) : data_(size) {}
         vector(const std::initializer_list<T> ilist) : data_(ilist) {}
         size_t size() const { return data_.size(); }
-        
+
         T& operator[](const size_t i) { return data_[i]; }
         T operator[](const size_t i) const { return data_[i]; }
-        
+
         using et_value_type = T;
-        
+
         template <typename E, typename = std::enable_if_t<!is_cvref_of_v<E, T>&& is_expr_of_v<E, T>>>
         vector(const E& expr) : data_(expr.size())
         {
             const size_t size = data_.size();
             for (size_t i = 0; i < size; i++) data_[i] = expr[i];
         }
-        
+
         template <typename E, typename = std::enable_if_t<!is_cvref_of_v<E, T>&& is_expr_of_v<E, T>>>
         vector& operator=(const E& expr)
         {
@@ -179,7 +180,7 @@ namespace liner_algebra
 
     template <typename L, typename R, typename = std::enable_if_t<is_expr_of_v<L, typename R::et_value_type>>>
     auto operator+(const L& lhs, const R& rhs) { return vector_plus<L, R>{ lhs, rhs }; }
-    
+
     template <typename T>
     std::ostream& operator<<(std::ostream& str, const vector<T>& vec)
     {
@@ -219,7 +220,76 @@ int main()
         const liner_algebra::vector<float> result = a1 * v1 + a2 * v2 + a3 * v3;
         const auto end = clock::now();
         std::cout << "Class abstraction elapsed " << (end - begin) / 1.0ms << "ms" << std::endl;
-    } 
+    }
     return 0;
 }
 ```
+
+## Pattern Matching
+
+Experimental implementation of C++ pattern matching is available.
+
+```cpp
+#include <iostream>
+#include <utility>
+
+void fizzbuzz()
+{
+  for (size_t i = 1; i <= 100; ++i)
+  {
+    inspect (std::pair(i % 3, i % 5))
+    {
+      [0 , 0 ] => { std::cout << "fizzbuzz\n"; }
+      [0 , __] => { std::cout << "fizz\n";     }
+      [__, 0 ] => { std::cout << "buzz\n";     }
+      [__, __] => { std::cout << i << '\n';    }
+    };
+  }
+}
+
+int main()
+{
+  fizzbuzz();
+  return 0;
+}
+```
+
+## Determining Compiler
+
+:::tip
+
+[Fun with conversion-operator name lookup](https://quuxplusone.github.io/blog/2021/01/13/conversion-operator-lookup/)
+
+:::
+
+An unqualified name that is a component name of a type-specifier or ptr-operator of a conversion-type-id is looked up in the same fashion as the conversion-function-id in which it appears. If that lookup finds nothing, it undergoes unqualified name lookup; in each case, only names that denote types or templates whose specializations are types are considered.
+
+The four mainstream compilers give four different answers for this simple C++ program:
+
+```cpp
+struct A {
+    using T = T1;
+    using U = U1;
+    operator U1 T1::*();
+    operator U1 T2::*();
+    operator U2 T1::*();
+    operator U2 T2::*();
+};
+
+inline auto which(U1 T1::*) { return "gcc"; }
+inline auto which(U1 T2::*) { return "icc"; }
+inline auto which(U2 T1::*) { return "msvc"; }
+inline auto which(U2 T2::*) { return "clang"; }
+
+int main()
+{
+    A a;
+    using T = T2;
+    using U = U2;
+    puts(which(a.operator U T::*()));
+}
+```
+
+The question is whether U should be looked up in the scope of test or in the scope of A; and the same question for T.
+
+According to the current draft standard, it sounds like the conforming answer is “they should both be looked up in the scope of A”; So GCC’s answer is correct and the others are wrong in three different ways.

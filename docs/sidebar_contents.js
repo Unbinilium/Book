@@ -74,8 +74,10 @@ module.exports = [
     children: [
       ["https://www.narihiroch.tk/", "Atelier Narihiro"],
       ["https://chlorie.github.io/ChloroBlog/", "Chlorie"],
+      ["https://draveness.me", "Draveness"],
       ["https://factorialn.xyz", "FactorialN"],
       ["https://nachtgeistw.github.io/Berksey/", "NachtgeistW"],
+      ["https://quuxplusone.github.io/blog/", "O'Dwyer"],
       ["https://wiki-power.com/", "Power's Wiki"],
       ["https://yoka.ml", "夜楓 Yoka"]
     ]

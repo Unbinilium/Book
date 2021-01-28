@@ -4,6 +4,7 @@ title: Web
 
 Cascading Style Sheets (CSS) is a style sheet language used for describing the presentation of a document written in a markup language like HTML. CSS is a cornerstone technology of the World Wide Web, alongside HTML and JavaScript.
 
+
 ## Dark Mode
 
 Light-on-dark color scheme, also called dark mode, dark theme or night mode, is a color scheme that uses light-colored text, icons, and graphical user interface elements on a dark background and is often discussed in terms of computer user interface design and web design.
@@ -109,8 +110,8 @@ function myFunction() {
   <source src="https://examples.com/video.mp4" type="video/mp4">
   <source src="https://examples.com/video.webm" type="video/webm">
   <p>
-    Your browser doesn't support HTML5 video. Here is a 
-    <a href="https://examples.com/video.mp4">link to the video</a> 
+    Your browser doesn't support HTML5 video. Here is a
+    <a href="https://examples.com/video.mp4">link to the video</a>
     instead.
   </p>
 </video>
@@ -129,13 +130,13 @@ function myFunction() {
   For better user experience, we need *preload attribute*. The HTML audio preload Attribute is used to specify the way when the video should be loaded while the page loads. Syntax here:
 
   ```html
-  <video preload="auto | metadata | none"> 
+  <video preload="auto | metadata | none">
   ```
 
   - `auto`: It is used to specify that the browser should load the entire video when the page loads.
-  
+
   - `metadata`: It is used to specify that the browser should load only metadata when the page loads.
-  
+
   - `none`: It is used to specify that the browser should NOT load the video when the page loads.
 
 - `playsinline`
@@ -183,11 +184,11 @@ HTTP Live Streaming (also known as HLS) is an HTTP-based adaptive bitrate stream
 Futhermore we can embed videos which extension is `.m3u8` liked using [HTTP Live Streaming](https://en.wikipedia.org/wiki/HTTP_Live_Streaming) protocol:
 
 ```html
-<video width="100%" height="auto" 
-       playsinline webkit-playsinline 
-       autoplay controls preload="auto" 
-       x-webkit-airplay="true" 
-       src="https://examples.com/video.m3u8" 
+<video width="100%" height="auto"
+       playsinline webkit-playsinline
+       autoplay controls preload="auto"
+       x-webkit-airplay="true"
+       src="https://examples.com/video.m3u8"
        type="application/x-mpegURL">
 </video>
 ```
@@ -195,10 +196,10 @@ Futhermore we can embed videos which extension is `.m3u8` liked using [HTTP Live
 If you are not only targeting evergreen browsers, you'd better use `video.js` for better compatible:
 
 ```html
-<video id="hls-video" class="video-js vjs-default-skin" 
-       width="100%" height="auto" 
-       playsinline webkit-playsinline 
-       autoplay controls preload="auto" 
+<video id="hls-video" class="video-js vjs-default-skin"
+       width="100%" height="auto"
+       playsinline webkit-playsinline
+       autoplay controls preload="auto"
        x-webkit-airplay="true">
     <source src="https://examples.com/video.m3u8" type="application/x-mpegURL">
 </video>
@@ -311,12 +312,12 @@ For the browsers using [WebKit](https://webkit.org/) like Apple Safari, add the 
 ```css
 ::-webkit-scrollbar {
   display: none
-} 
+}
 ```
 
 ## Open Graph tags
 
-The Open Graph protocol enables any web page to become a rich object in a social graph. For instance this is used on Facebook to allow any web page to have the same functionality as any other object on Facebook. 
+The Open Graph protocol enables any web page to become a rich object in a social graph. For instance this is used on Facebook to allow any web page to have the same functionality as any other object on Facebook.
 
 While many different technologies and schemas exist and could be combined together, there isn't a single technology which provides enough information to richly represent any web page within the social graph.
 

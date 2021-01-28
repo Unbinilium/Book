@@ -4,6 +4,7 @@ title: Python
 
 Python is an interpreted, high-level, general-purpose programming language. Created by Guido van Rossum and first released in 1991.
 
+
 ## Dictionary
 
 Each key is separated from its value by a colon `:`, the items are separated by commas, and the whole thing is enclosed in curly braces. An empty dictionary without any items is written with just two curly braces, like this: `{}`.
